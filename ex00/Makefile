@@ -1,0 +1,47 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tecker <tecker@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/09/19 15:23:34 by tecker            #+#    #+#              #
+#    Updated: 2024/09/19 15:56:26 by tecker           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+NAME			=	zombie
+
+CC				=	c++
+
+CFLAGS			=	-Wall -Werror -Wextra
+
+SRC_FILES		=	main.cpp \
+					Zombie.cpp \
+					newZombie.cpp \
+					randomChump.cpp \
+
+OBJ_DIR			=	./obj
+
+OBJ_FILES		= 	$(SRC_FILES:%.cpp=$(OBJ_DIR)/%.o)
+
+all:	$(NAME)
+
+$(NAME):	$(OBJ_FILES)
+	$(CC) $(CFLAGS) $^ -o $@
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
+$(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -rf $(OBJ_DIR)
+
+fclean:	clean
+	rm -f $(NAME)
+
+re:	fclean all
+
