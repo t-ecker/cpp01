@@ -11,6 +11,7 @@ void    Zombie::set_name(std::string name)
 }
 
 Zombie::Zombie(void)
+    :   _name("unnamed")
 {
 }
 
@@ -18,3 +19,5 @@ Zombie::~Zombie(void)
 {
     std::cout << this->_name << " died" << std::endl;
 }
+
+

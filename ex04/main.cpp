@@ -10,12 +10,12 @@ bool	check_args(int argc, char **argv)
 	std::string file = argv[1];
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
-	if (file.size() < 4 || file.substr(file.size() - 4) != ".txt")
-	{
-		std::cout << "wrong file type" << std::endl;
-		return (false);
-	}
-	if (s1.empty() || s2.empty())
+	// if (file.size() < 4 || file.substr(file.size() - 4) != ".txt")
+	// {
+	// 	std::cout << "wrong file type" << std::endl;
+	// 	return (false);
+	// }
+	if (file.empty() || s1.empty())
 	{
 		std::cout << "wrong arguments" << std::endl;
 		return (false);

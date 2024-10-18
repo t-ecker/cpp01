@@ -2,11 +2,6 @@
 
 int main(void)
 {
-    // Weapon w1;
-    // w1.setType("gun");
-    // const std::string &ref = w1.getType();
-    // std::cout << ref << std::endl;
-
     {
     Weapon club = Weapon("crude spiked club");
     HumanA bob("Bob", club);

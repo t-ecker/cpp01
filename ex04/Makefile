@@ -2,7 +2,7 @@ NAME			=	zombie
 
 CC				=	c++
 
-# CFLAGS			=	-Wall -Werror -Wextra
+CFLAGS			=	-Wall -Werror -Wextra -std=c++17
 
 SRC_FILES		=	main.cpp \
 

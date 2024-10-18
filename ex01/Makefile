@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tecker <tecker@student.42.fr>              +#+  +:+       +#+         #
+#    By: tomecker <tomecker@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/19 15:23:34 by tecker            #+#    #+#              #
-#    Updated: 2024/09/20 14:03:18 by tecker           ###   ########.fr        #
+#    Updated: 2024/10/18 11:11:24 by tomecker         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME			=	zombie
 
 CC				=	c++
 
-CFLAGS			=	-Wall -Werror -Wextra
+CFLAGS			=	-Wall -Werror -Wextra -std=c++17
 
 SRC_FILES		=	main.cpp \
 					Zombie.cpp \
